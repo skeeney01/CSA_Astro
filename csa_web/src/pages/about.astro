@@ -1,0 +1,369 @@
+---
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { getPermalink } from '~/utils/permalinks';
+import Safe from '~/components/widgets/indSafety.astro';
+import Standards from '~/components/widgets/standards.astro';
+
+const metadata = {
+  title: 'Industries',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    actions={
+      [
+        {
+        text: 'Rail Safety',
+        href: '#rail',
+      },
+      {
+        text: 'Robotics Safety',
+        href: '#robotics',
+      },
+    ]
+    }
+    tagline=""
+    image={{
+      src: '~/assets/images/skyline3.jpeg',
+      alt: 'City Skyline',
+    }}
+  >
+    <Fragment slot="title">
+      Industries <br />
+      <!-- <span class="text-accent dark:text-white highlight"> Beautiful Website Templates</span> -->
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      CSA has contributed to projects in many industries including rail, robotics, industrial machinery and autonomous vehicles. Learn more about the projects we have worked on in the <a href="/services", class="highlighted-link">experience page</a>
+    </Fragment>
+  </Hero>
+
+  <style>
+    .highlighted-link {
+      color: orange;
+      /* text-decoration: bold; */
+    }
+
+    .highlighted-link:hover {
+      color: darkblue;
+    }
+  </style>
+
+  <!-- Stats Widget ****************** -->
+
+  <!-- <Stats
+    title="Statistics about us"
+    stats={[
+      { title: 'Offices', amount: '4' },
+      { title: 'Employees', amount: '248' },
+      { title: 'Templates', amount: '12' },
+      { title: 'Awards', amount: '24' },
+    ]}
+  /> -->
+
+  <!-- Features3 Widget ************** -->
+
+  <Safe
+
+    columns={2}
+    isBeforeContent={false}
+    items={[
+      {
+        title: 'Rail Safety',
+        description:
+          'The rail industry is highly regulated and requires rigorous analysis to comply with safety requirements. CSA has long been involved in the development and integration of processor-based fail-safe train control systems.',
+        icon: 'tabler:template',
+        // image: {
+        //   src: 'https://criticalsa-website.s3.amazonaws.com/_astro/EXP_AMR.khVmCtzA.jpeg',
+        //   alt: 'Steps image',
+        // }
+      },
+      {
+        title: 'Robotics Safety',
+        description:
+          'The application of safety in robotic systems is complex and rapidly evolving. There are numerous standards for each technology class and new standards are being released every year, it can be difficult to stay up with the state-of-the-art.',
+        icon: 'tabler:template',
+      },
+      
+    ]}
+  />
+
+  <!-- <Features3
+    title=""
+    subtitle=""
+    columns={2}
+    isBeforeContent={false}
+    items={[
+      {
+        title: 'Rail Safety',
+        description:
+          'The rail industry is highly regulated and requires rigorous analysis to comply with safety requirements. CSA has long been involved in the development and integration of processor-based fail-safe train control systems.',
+        icon: 'tabler:template',
+        // image: {
+        //   src: 'https://criticalsa-website.s3.amazonaws.com/_astro/EXP_AMR.khVmCtzA.jpeg',
+        //   alt: 'Steps image',
+        // }
+      },
+      {
+        title: 'Robotics Safety',
+        description:
+          'The application of safety in robotic systems is complex and rapidly evolving. There are numerous standards for each technology class and new standards are being released every year, it can be difficult to stay up with the state-of-the-art.',
+        icon: 'tabler:template',
+      },
+      
+    ]}
+  /> -->
+
+  <!-- Features3 Widget ************** -->
+
+  <!-- <Features3
+    columns={3}
+    isAfterContent={true}
+    items={[
+      {
+        title: 'E-commerce',
+        description:
+          'Rutrum non odio at vehicula. Proin ipsum justo, dignissim in vehicula sit amet, dignissim id quam. Sed ac tincidunt sapien.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Blog',
+        description:
+          'Nullam efficitur volutpat sem sed fringilla. Suspendisse et enim eu orci volutpat laoreet ac vitae libero.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Business',
+        description:
+          'Morbi et elit finibus, facilisis justo ut, pharetra ipsum. Donec efficitur, ipsum quis congue luctus, mauris magna.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Branding',
+        description:
+          'Suspendisse vitae nisi eget tortor luctus maximus sed non lectus. Cras malesuada pretium placerat. Nullam venenatis dolor a ante rhoncus.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Medical',
+        description:
+          'Vestibulum malesuada lacus id nibh posuere feugiat. Nam volutpat nulla a felis ultrices, id suscipit mauris congue. In hac habitasse platea dictumst.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Fashion Design',
+        description:
+          'Maecenas eu tellus eget est scelerisque lacinia et a diam. Aliquam velit lorem, vehicula id fermentum et, rhoncus et purus.',
+        icon: 'tabler:template',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
+      alt: 'Colorful Image',
+    }}
+  /> -->
+
+  <!-- Steps2 Widget ****************** -->
+
+  
+
+  <!-- Features2 Widget ************** -->
+
+  
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    id="robotics"
+    title="Robotics Services"
+    tagline="How we can help"
+    columns={3}
+    items={[
+      {
+        title: 'Safety Trainings',
+        description:
+          '• ISO 13849 | IEC 61508 | IEC 62061 | ISO 26262 <br /> • Risk Assessment | FMEA | FMEDA | FTA <br /> • Tailored trainings available',
+        icon: 'tabler:books',
+      },
+      {
+        title: 'Functinal Safety Management',
+        description:
+          '• One-time or on demand project planning guidance <br /> • Dedicated safety manager to lead project safety efforts <br /> • Certification guidance and support',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Work Products Creation',
+        description:
+          '• Temporary safety engineering to support project peak demand <br /> • Safety analysis to support safety case <br /> • Risk Assessment | FMEA | FMEDA | FTA <br /> • Leverage CSA’s experience to create higher quality work products faster',
+        icon: 'tabler:settings-code',
+      },
+    ]}
+  />
+
+  <Standards
+    title=""
+    tagline="Robotics Standards"
+    columns={4}
+    image={{ src: '~/assets/images/welding robotic arm.jpg', alt: 'Critical Systems Analysis Image' }}
+    items={[
+      {
+        title: 'ISO 13849',
+        description: 'Safety of Machinery - SRP/CS',
+      },
+      {
+        title: 'ISO 12100',
+        description: 'Guide for Risk Assessments',
+      },
+      {
+        title: 'IEC 61508',
+        description: 'Functional Safety of Safety Related Control Systems',
+      },
+      {
+        title: 'ANSI/ASME B20.1',
+        description: 'Statdard for Conveyors',
+      },
+      {
+        title: 'NFPA 79-2021',
+        description: 'Electrical Standards for Industrial Machinery',
+      },
+      {
+        title: 'IEC 62061',
+        description: 'Safety of machinery: Functional safety of E/E/PE control systems',
+      },
+      {
+        title: 'ISO 14119',
+        description: 'Safety of machinery — Interlocking devices associated with guards',
+      },
+      {
+        title: 'IEC 61496',
+        description: 'Safety of machinery - Electro-sensitive protective equipment',
+      },
+    ]}
+  />
+
+  <Features2
+    id="rail"
+    title="Rail Services"
+    tagline="What we do"
+    columns={3}
+    items={[
+      {
+        title: 'Systems Engineering',
+        description:
+          '• ISO 13849 | IEC 61508 | IEC 62061 | ISO 26262 <br /> • Risk Assessment | FMEA | FMEDA | FTA <br /> • Tailored trainings available',
+        icon: 'tabler:sitemap',
+      },
+      {
+        title: 'Systems Assurance',
+        description:
+          '• One-time or on demand project planning guidance <br /> • Dedicated safety manager to lead project safety efforts <br /> • Certification guidance and support',
+        icon: 'tabler:world-cog',
+      },
+      {
+        title: 'Safety & Security Assessment',
+        description:
+          '• Temporary safety engineering to support project peak demand <br /> • Safety analysis to support safety case <br /> • Risk Assessment | FMEA | FMEDA | FTA <br /> • Leverage CSA’s experience to create higher quality work products faster',
+        icon: 'tabler:lock-code',
+      },
+      {
+        title: 'RAM Analysis',
+        description:
+          '• ISO 13849 | IEC 61508 | IEC 62061 | ISO 26262 <br /> • Risk Assessment | FMEA | FMEDA | FTA <br /> • Tailored trainings available',
+        icon: 'tabler:hexagon-3d',
+      },
+      {
+        title: 'Threat & Vulnerability Assessments',
+        description:
+          '• One-time or on demand project planning guidance <br /> • Dedicated safety manager to lead project safety efforts <br /> • Certification guidance and support',
+        icon: 'tabler:user-shield',
+      },
+      {
+        title: 'Safety Analyses',
+        description:
+          '• Temporary safety engineering to support project peak demand <br /> • Safety analysis to support safety case <br /> • Risk Assessment | FMEA | FMEDA | FTA <br /> • Leverage CSA’s experience to create higher quality work products faster',
+        icon: 'tabler:devices-check',
+      },
+    ]}
+  />
+
+  <Standards
+    
+    title=""
+    tagline="Rail Standards"
+    columns={3}
+    image={{ src: '~/assets/images/high speed train 2.jpg', alt: 'Critical Systems Analysis Image' }}
+    items={[
+      {
+        title: 'ISO 14119',
+        description: 'Safety of machinery — Interlocking devices associated with guards',
+      },
+      {
+        title: 'IEC 61496',
+        description: 'Safety of Machinery - Electrosensitive protective equipment',
+      },
+      {
+        title: 'ISO/IEC/IEEE 15288',
+        description: 'System life cycle processes',
+      },
+      {
+        title: 'EN 50126-1/50126-2',
+        description: 'Reliability, availability, maintainability, and safety (RAMS) for rail',
+      },
+      {
+        title: 'MIL-STD-785B',
+        description: 'System safety analyses for DoD systems',
+      },
+      {
+        title: 'AREMA',
+        description: 'American Railway Engineering and Maintenance-of-Way Association',
+      },
+      
+    ]}
+  />
+  
+  <Features2
+    title="Deliverables"
+    tagline=""
+    columns={3}
+    items={[
+      {
+        title: 'Systems Engineering',
+        description:
+          '• ISO 13849 | IEC 61508 | IEC 62061 | ISO 26262 <br /> • Risk Assessment | FMEA | FMEDA | FTA <br /> • Tailored trainings available',
+        icon: '',
+      },
+      {
+        title: 'Assurance Plans',
+        description:
+          '• One-time or on demand project planning guidance <br /> • Dedicated safety manager to lead project safety efforts <br /> • Certification guidance and support',
+        icon: '',
+      },
+      {
+        title: 'Analysis',
+        description:
+          '• Temporary safety engineering to support project peak demand <br /> • Safety analysis to support safety case <br /> • Risk Assessment | FMEA | FMEDA | FTA <br /> • Leverage CSA’s experience to create higher quality work products faster',
+        icon: '',
+      },
+      {
+        title: 'Reports',
+        description:
+          '• ISO 13849 | IEC 61508 | IEC 62061 | ISO 26262 <br /> • Risk Assessment | FMEA | FMEDA | FTA <br /> • Tailored trainings available',
+        icon: '',
+      },
+      {
+        title: 'Certifications',
+        description:
+          '• One-time or on demand project planning guidance <br /> • Dedicated safety manager to lead project safety efforts <br /> • Certification guidance and support',
+        icon: '',
+      },
+      
+    ]}
+  />
+</Layout>

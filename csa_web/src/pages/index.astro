@@ -1,0 +1,368 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Note from '~/components/widgets/Note.astro';
+import Features from '~/components/widgets/Features.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Content from '~/components/widgets/Content.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import { getPermalink } from '~/utils/permalinks';
+
+const metadata = {
+  title: 'CSA',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Contact us',
+        href: getPermalink('/contact'),
+        target: '_blank',
+        icon: '',
+      },
+      { text: 'Learn more', href: '#features' },
+    ]}
+    image={{ src: '~/assets/images/welding robotic arm 2.jpg', alt: 'Critical Systems Analysis Image' }}
+  >
+    <Fragment slot="title"> Critical Systems Analysis </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        <span class="font-semibold"></span>Make More Machines, More Safe</span
+      >
+    </Fragment>
+</Hero>
+
+  <Features
+    id="features"
+    title="Safety Consulting Done Right"
+    subtitle="Saftey consultants and educators provide an expert perspective on systems assurance, safety engineering, and RAM engineering that save you time and money in developing the safest systems practical."
+    items={[
+      // {
+      //   title: 'Safety and Security',
+      //   description: '',
+      //   icon: 'tabler:brand-tailwind',
+      // },
+      // {
+      //   title: 'RAM',
+      //   description: '',
+      //   icon: 'tabler:components',
+      // },
+      // {
+      //   title: 'Threat and Vulnerability',
+      //   description: '',
+      //   icon: 'tabler:list-check',
+      // },
+      // {
+      //   title: 'Systems Engineering',
+      //   description: '',
+      //   icon: 'tabler:rocket',
+      // },
+      // {
+      //   title: 'Systems Assurance',
+      //   description: '',
+      //   icon: 'tabler:arrows-right-left',
+      // },
+      // {
+      //   title: 'Monitoring',
+      //   description: '',
+      //   icon: 'tabler:bulb',
+      // },
+    ]}
+  />
+
+  <Steps 
+    title='Making safety more accessible'
+    isReversed={false}
+    items={
+      [
+        {
+          title: 'Reduce Cost',
+          icon:'tabler:arrow-up',
+        },
+        {
+          title: 'Accelerate Safety Development',
+          icon:'tabler:arrow-up',
+        },
+        {
+          title: 'Educate and Simplify',
+          icon:'tabler:arrow-up',
+        },
+      ]
+    }
+    image={{
+      src: '~/assets/images/helmet.jpeg',
+      alt: 'Safety Image',
+    }}
+  />
+  
+  <CallToAction
+  actions={[
+  ]}
+  >
+  <Fragment slot="title">
+    <span class="sm:whitespace-nowrap">Save Time. Save Money.</span>
+  </Fragment>
+
+  <Fragment slot="subtitle"> CSA has the expertise to discover issues sooner leading to a smaller cost to correct, saving you time and money. </Fragment>
+</CallToAction>
+
+
+  <!-- Content Widget **************** -->
+
+  <!-- <Content
+    isReversed
+    title="Making safety more accessable"
+    items={[
+      {
+        title: 'Reduce Cost',
+        description: '',
+      },
+      {
+        title: 'Accelerate Safety Development',
+        description: '',
+      },
+      {
+        title: 'Educate and Simplify',
+        description: "",
+      },
+    ]}
+    image={{
+      src: '~/assets/images/Safety_Access.jpeg',
+      alt: 'Colorful Image',
+    }}
+  >
+    <Fragment slot="content">
+      
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content> -->
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    title="Rail"
+    tagline="Industry Expertise"
+    isReversed={true}
+    items={[
+      {
+        title: 'Commuter | Freight | Transit | Autonomy ',
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Independent and Impartial',
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Systems and Safety Engineering',
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Safety Analysis | Safety Assessment | System Reliability Analysis | Safety Lifecycle Management',
+        icon: 'tabler:check',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/train1.jpg',
+      alt: 'Steps image',
+    }}
+  />
+
+  <Steps
+    title="Robotics"
+    tagline="Industry Expertise"
+    isReversed={false}
+    items={[
+      
+      {
+        title: 'Technical experts in functional safety and product safety - Industrial robotics | AMR | work cell | heavy machinery',
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Vast experience in many globally accepted safety analysis techniques',
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Leverage extensive experiences in systems engineering and safety engineering',
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Achieve compliance faster with CSA - ISO 13849 | IEC 61508 | IEC 62061 | ISO 26262',
+        icon: 'tabler:check' 
+      },
+    ]}
+    image={{
+      src: '~/assets/images/welding robotic arm 4.jpg',
+      alt: 'Steps image',
+    }}
+  />
+
+  
+  <Steps2
+    title="Services"
+    subtitle="Whether you are searching for guidance and advice, support in document creation and safety analyses, or corporate training, CSA is here to serve."
+    callToAction={{
+      text: 'Services Page',
+      href: '/careers',
+    }}
+    items={[
+      {
+        title: 'Strategic Certification Consulting',
+        description:
+          'Provide advice and direction on historically successful project planning strategies.',
+      },
+      {
+        title: 'Safety Program Support',
+        description:
+          'Demonstrate and perform complex safety analysis and generate safety deliverables.',
+      },
+      {
+        title: 'Training',
+        description:
+          'Educate teams and individuals on the skills required for every aspect of the safety lifecycle.',
+      },
+    ]}
+  />
+
+
+  <!-- Steps2 Widget ****************** -->
+
+  <!-- <Steps2
+    title="Save Time. Save Money."
+    subtitle="CSA has the expertise to discover issues sooner leading to a smaller cost to correct, saving you time and money."
+    isReversed={true}
+    
+    items={[
+      {
+        title: 'Describe how catching errors sooner saves money and time',
+        description: 'Additional details',
+        icon: 'tabler:globe',
+      },
+      {
+        title: 'Expertise',
+        description:
+          'Cras semper nulla leo, eget laoreet erat cursus sed. Praesent faucibus massa in purus iaculis dictum.',
+        icon: 'tabler:message-star',
+      },
+      {
+        title: 'Industry Experience',
+        description:
+          'Phasellus lacinia cursus velit, eu malesuada magna pretium eu. Etiam aliquet tellus purus, blandit lobortis ex rhoncus vitae.',
+        icon: 'tabler:award',
+      },
+    ]}
+  /> -->
+
+
+  <!-- <Steps
+    title="How CSA will take your operations to the next level"
+    items={[
+      {
+        title: 'Step 1: <span class="font-medium">Contact us</span>',
+        description: 'Reach out to our friendly service reps',
+        icon: 'tabler:package',
+      },
+      {
+        title: 'Step 2: <span class="font-medium">Explore our services</em>',
+        description:
+          'Our reps will work to find the best options available to your organization to bring your operations to the next level.',
+        icon: 'tabler:letter-case',
+      },
+      {
+        title: 'Step 3: <span class="font-medium">Receive your customized plan</span>',
+        description: 'Not really sure what you do but idk maybe Ben DMs you with a spreadsheet or something.',
+        icon: 'tabler:paint',
+      },
+      {
+        title: 'Profit',
+        icon: 'tabler:check',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
+      alt: 'Steps image',
+    }}
+  /> -->
+
+  <!-- FAQs Widget ******************* -->
+
+  <!-- <FAQs
+    title="Frequently Asked Questions"
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: 'Why CSA?',
+        description:
+          "Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's a demon on wheels.",
+      },
+      {
+        title: 'What do I need to start?',
+        description:
+          'Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds. Many say exploration is part of our destiny, but it’s actually our duty to future generations.',
+      },
+      {
+        title: 'How quick does it take to implement our solutions?',
+        description:
+          "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.",
+      },
+      {
+        title: 'How much can we expect to save?',
+        description:
+          "A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big Bear.",
+      },
+      {
+        title: 'Why do I have so many nightmares?',
+        description:
+          "A business big enough that it could be listed on the NASDAQ goes belly up. Disappears! It ceases to exist without me. No, you clearly don't know who you're talking to, so let me clue you in.",
+      },
+      {
+        title: 'If you could only ask one question to each person you meet, what would that question be?',
+        description:
+          "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
+      },
+    ]}
+  /> -->
+
+  <!-- Stats Widget ****************** -->
+
+  <!-- <Stats
+    stats={[
+      { title: 'Customers', amount: '55' },
+      { title: 'Cost saved each project', amount: '$24.8K' },
+      { title: 'Engineers', amount: '10' },
+      { title: "Hayden's", amount: '1' },
+    ]}
+  /> -->
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Contact us',
+        href: getPermalink('/contact'),
+        target: '_blank',
+        icon: '',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      <span class="sm:whitespace-nowrap">Contact us today</span>
+    </Fragment>
+
+    <Fragment slot="subtitle"> Find out what CSA can do for you </Fragment>
+  </CallToAction>
+</Layout>

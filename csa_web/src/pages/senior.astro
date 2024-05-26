@@ -1,0 +1,203 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Prices from '~/components/widgets/Pricing.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import { getPermalink } from '~/utils/permalinks';
+import Hero from '~/components/widgets/Hero.astro';
+import Features from '~/components/widgets/Features.astro';
+import Note from '~/components/widgets/Note.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+
+const metadata = {
+  title: 'positions',
+};
+---
+
+<Layout metadata={metadata}>
+  
+  <Features
+  id="features"
+  title="Senior Safety Engineer"
+  subtitle="Position Details"
+  items={[
+    {
+      title: 'Job Category',
+      description: 'Engineering',
+      icon: '',
+    },
+    {
+      title: 'Entry Level',
+      description: 'No',
+      icon: '',
+    },
+    {
+      title: 'Location',
+      description: 'U.S. (Remote)',
+      icon: '',
+    },
+    {
+      title: 'Job Type',
+      description: 'Full-Time',
+      icon: '',
+    },
+  ]}
+/>
+
+<CallToAction
+    title="Want to join the CSA team?"
+    subtitle=""
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Apply Now',
+        href: '/application',
+      },
+    ]}
+  />
+  
+  <div style="height: 150px;"></div>
+
+  <div class="astro-component-container flex justify-center">
+    <div class="astro-component">
+      <h2 class="text-4xl font-bold mb-4 text-page">Position Overview</h2>
+      <p class="text-xl text-muted">As a Senior Safety Engineer, you will serve as the subject matter expert by leading technical aspects and providing team leadership for safety engineering projects. Responsibilities encompass conducting safety analysis, offering technical consulting, generating reports, and providing support for safety programs.</p>
+    </div>
+  </div>
+  
+  <div style="height: 150px;"></div>
+  
+  <style>
+    .astro-component-container {
+      /* Center the container horizontally */
+      margin: 0 auto;
+      padding: 0 calc(20vw);
+    }
+    
+    .astro-component {
+      /* You can add any additional styling for the component container here */
+    }
+  </style>
+
+  
+  <Steps
+    title="Responsibilities"
+    tagline="Senior Safety Engineer"
+    isReversed={true}
+    items={[
+      {
+        title: 'Manage safety programs. Provide project definition, management, budget compliance, schedule adherence, and project reporting. Supervising and managing team members.',
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Lead safety engineering activities. Set direction for complex projects, develop schedules, and coordinate phases of projects.',
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Develop safety requirements and safety plans, perform safety and hazard analysis, and report on findings. Supervising and managing team members.',
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Review and interpret safety regulations and standards. Monitor client safety performance, conduct safety inspections, and assist in regulatory compliance.',
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Train clients on safety program development, performance, documentation, and regulatory acceptance.',
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Solve complex safety issues.',
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Manage, train, and mentor Junior Safety Engineers.',
+        icon: 'tabler:check',
+      },
+    ]}
+    
+  />
+  <Steps
+    title="Qualifications"
+    tagline="Junior Safety Engineer"
+    isReversed={true}
+    items={[
+      {
+        title: '• 10+ years of experience as a Safety Engineer',
+        icon: '',
+      },
+      {
+        title: '• Expertise and understanding of technical analysis including hazard analyses, risk assessments, FTAs, and RBDs.',
+        icon: '',
+      },
+      {
+        title: '• Thorough understanding of the safety lifecycle.',
+        icon: '',
+      },
+      {
+        title: '• Knowledge of industry standards.',
+        icon: ''
+      },
+      {
+        title: '• Superior communication abilities, capable of articulating intricate scientific and technical data in a straightforward, brief, and comprehensible way, both orally and in technical documentation.',
+        icon: ''
+      }
+    ]}
+    
+  />
+
+  <div style="height: 150px;"></div>
+
+  <div class="astro-component-container flex justify-center">
+    <div class="astro-component">
+      <h2 class="text-4xl font-bold mb-4 text-page">Certifications</h2>
+      <p class="text-xl text-muted">Functional Safety Expert certificate or equivalent.</p>
+    </div>
+  </div>
+  
+  <div style="height: 150px;"></div>
+
+  <div class="astro-component-container flex justify-center">
+    <div class="astro-component">
+      <h2 class="text-4xl font-bold mb-4 text-page">Work Environment</h2>
+      <p class="text-xl text-muted">The Senior Safety Engineer position is fully remote, except for required travel to client facilities. As such, you will work from a home office.</p>
+    </div>
+  </div>
+  
+  <div style="height: 150px;"></div>
+
+  <Steps
+    title="Benefits"
+    tagline=""
+    isReversed={true}
+    items={[
+      {
+        title: '• Schedule flexibility.',
+        icon: '',
+      },
+      {
+        title: '• Company matched SIMPLE IRA.',
+        icon: '',
+      },
+      {
+        title: '• Company Matched HSA available.',
+        icon: '',
+      },
+      {
+        title: '• Medical, dental, and vision insurance covered.',
+        icon: ''
+      },
+      {
+        title: '• Generous PTO.',
+        icon: ''
+      },
+      {
+        title: '',
+        icon: ''
+      }
+    ]}
+    
+  />
+</Layout>

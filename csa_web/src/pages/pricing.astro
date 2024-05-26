@@ -1,0 +1,228 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Prices from '~/components/widgets/Pricing.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import { getPermalink } from '~/utils/permalinks';
+
+const metadata = {
+  title: 'Services',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+
+  <!-- <HeroText
+    tagline="Services"
+    title="What CSA can do for you"
+    subtitle=""
+  /> -->
+  <Hero
+    title="Services"
+    subtitle="Learn what CSA can do for you"
+    actions={[]}
+    image={{
+      src: '~/assets/images/Services_Top.jpeg',
+      alt: 'AstroWind Hero Image',
+    }}
+  />
+
+  <!-- Pricing Widget ******************* -->
+
+  <!-- <Prices
+    title="Our prices"
+    subtitle="Only pay for what you need"
+    prices={[
+      {
+        title: 'basic',
+        subtitle: 'Optimal choice for personal use',
+        price: 29,
+        period: 'per month',
+        items: [
+          {
+            description: 'Etiam in libero, et volutpat',
+          },
+          {
+            description: 'Aenean ac nunc dolor tristique',
+          },
+          {
+            description: 'Cras scelerisque accumsan lib',
+          },
+          {
+            description: 'In hac habitasse',
+          },
+        ],
+        callToAction: {
+          target: '_blank',
+          text: 'Get started',
+          href: '#',
+        },
+      },
+      {
+        title: 'standard',
+        subtitle: 'Optimal choice for small teams',
+        price: 69,
+        period: 'Per Month',
+        items: [
+          {
+            description: 'Proin vel laoreet',
+          },
+          {
+            description: 'Ut efficitur habitasse egestas',
+          },
+          {
+            description: 'Volutpat hac curabitur',
+          },
+          {
+            description: 'Pellentesque blandit ut nibh',
+          },
+          {
+            description: 'Donec fringilla sem',
+          },
+        ],
+        callToAction: {
+          target: '_blank',
+          text: 'Get started',
+          href: '#',
+        },
+        hasRibbon: true,
+        ribbonTitle: 'popular',
+      },
+      {
+        title: 'premium',
+        subtitle: 'Optimal choice for companies',
+        price: 199,
+        period: 'Per Month',
+        items: [
+          {
+            description: 'Curabitur suscipit risus',
+          },
+          {
+            description: 'Aliquam habitasse malesuada',
+          },
+          {
+            description: 'Suspendisse sit amet blandit',
+          },
+          {
+            description: 'Suspendisse auctor blandit dui',
+          },
+        ],
+        callToAction: {
+          target: '_blank',
+          text: 'Get started',
+          href: '#',
+        },
+      },
+    ]}
+  /> -->
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    title=""
+    subtitle=""
+    columns={3}
+    items={[
+      {
+        title: 'Systems Engineering',
+        description: '• Systems Engineering Management <br /> • Interface Control Documents',
+        icon: 'tabler:sitemap',
+      },
+      {
+        title: 'Threat & Vulnerabilities',
+        description: '• Threat and Vulnerability Assessments<br /> • Security Assessments',
+        icon: 'tabler:alert-triangle',
+      },
+      {
+        title: 'Verification and Validation',
+        description: '• Validation Management<br /> • Development of Test Plans <br /> • Validation of Requirements',
+        icon: 'tabler:list-check',
+      },
+      {
+        title: 'Systems Assurance',
+        description: '• Systems Assurance<br /> • Interface Control Documents Compliance<br /> • Safety & Security Compliance<br /> • RAM Compliance<br /> • Revenue Service Readiness<br /> • O&M Service Demonstration ',
+        icon: 'tabler:world-check',
+      },
+      {
+        title: 'Functional Safety',
+        description: '• Risk Assessment<br /> • Develop Requirements and Traceability<br /> • Develop System Design Description<br /> • Safety Analysis<br /> • Facilitate certification process with assessors',
+        icon: 'tabler:shield-exclamation',
+      },
+      {
+        title: 'Product Safety',
+        description: '• Risk Assessment<br /> • Ergonomic Assessment<br /> • Regulatory Compliance<br /> • Facilitate listing / labeling with NRTL',
+        icon: 'tabler:replace',
+      },
+      {
+        title: 'RAM Analysis',
+        description: '• RAM Preparation, Consulting, and Assessment<br /> • Develop Reliability and Lifecycle Engineering Processes and Tools<br /> • LCC (Life Cycle Costing) Prognosis and Optimization<br /> • RAM – Analyses (Product and Systems)<br /> • Reliability Demonstration Testing',
+        icon: 'tabler:device-sd-card',
+      },
+      
+      
+    ]}
+    classes={{ container: 'max-w-5xl' }}
+  />
+
+  <!-- Steps Widget ****************** -->
+
+  
+  <!-- FAQs Widget ******************* -->
+
+  <!-- <FAQs
+    title="Pricing FAQs"
+    subtitle="Choosing the right plan is important, and we're here to answer your questions. If you have queries about our pricing options, you're in the right place."
+    columns={1}
+    items={[
+      {
+        title: 'Do the plans come with customer support?',
+        description:
+          'Absolutely, all plans include access to our dedicated customer support to assist you with any queries or concerns.',
+      },
+      {
+        title: 'Is there a trial period for the different plans?',
+        description:
+          "Unfortunately, we don't offer trial periods for the plans. However, you can check out our demo section to preview the quality of our templates.",
+      },
+      {
+        title: 'Can I switch between plans?',
+        description:
+          'Certainly! You can easily upgrade or downgrade your plan, at any time, to find the one that best suits your evolving requirements.',
+      },
+      {
+        title: 'What payment methods do you accept?',
+        description:
+          'We accept major credit cards and online payment methods to ensure a convenient and secure transaction process.',
+      },
+      {
+        title: 'Are there any hidden fees beyond the displayed cost?',
+        description:
+          'No, the subscription cost covers all the features and templates listed under each plan. There are no hidden fees or extra charges.',
+      },
+    ]}
+  /> -->
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    title="Interested in our services?"
+    subtitle="Contact us or learn more about the services CSA provides"
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Contact us',
+        href: '/contact',
+      },
+      {
+        variant: 'primary',
+        text: 'Learn more',
+        href: '/about',
+      },
+    ]}
+  />
+</Layout>

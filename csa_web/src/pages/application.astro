@@ -1,0 +1,106 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import ContactUs from '~/components/widgets/Contact.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+
+const metadata = {
+  title: 'Apply',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+
+  <HeroText tagline="Critical Systems Analysis" title="Application" />
+
+  <ContactUs
+    id="form3"
+    title="Personal and Professional Information"
+    subtitle=""
+    inputs={[
+      {
+        type: 'text',
+        name: 'first',
+        label: 'First Name',
+      },
+      {
+        type: 'text',
+        name: 'last',
+        label: 'Last Name',
+      },
+      {
+        type: 'email',
+        name: 'email',
+        label: 'Email',
+      },
+      {
+        type: 'tel',
+        name: 'phone',
+        label: 'Phone',
+      },
+      {
+        type: 'text',
+        name: 'location',
+        label: 'Country of Residence',
+      },
+      {
+        type: 'text',
+        name: 'info',
+        label: 'How did you hear about us?',
+      },
+      {
+        type: 'select',
+        name: 'position',
+        label: 'Position',
+      },
+      {
+        type: 'text',
+        name: 'linkedin',
+        label: 'LinkedIn Profile Link',
+      },
+      {
+        type: 'file',
+        name: 'resume',
+        label: 'Resume',
+      },
+      {
+        type: 'number',
+        name: 'experience',
+        label: 'Years of Experience',
+      },
+      
+    ]}
+    textarea={{
+      label: 'Additional Comments',
+    }}
+    
+    description=""
+
+    button='Submit Application'
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="We are here to help!"
+    items={[
+      
+      {
+        title: 'Phone',
+        description: '+1 (941) 900-4047',
+        icon: 'tabler:headset',
+      },
+      {
+        title: 'Email',
+        description: 'Sales@CriticalSA.com',
+        icon: 'tabler:mail',
+      },
+      {
+        title: 'Location',
+        description: 'United States',
+        icon: 'tabler:map-pin',
+      },
+    ]}
+  />
+</Layout>

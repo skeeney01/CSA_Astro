@@ -1,0 +1,112 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Prices from '~/components/widgets/Pricing.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Careers',
+};
+---
+
+<Layout metadata={metadata}>
+    <!-- HeroText Widget ******************* -->
+  
+    <HeroText
+      tagline="Careers"
+      title="Join our Team"
+      subtitle=""
+    />
+  
+    <!-- Pricing Widget ******************* -->
+  
+    <Prices
+      title="Open Positions"
+      subtitle="Interested in joining the CSA team? Explore open positions below!"
+      prices={[
+        {
+          title: 'Junior Safety Engineer',
+          subtitle: '',
+          price: 10,
+          period: 'period',
+          items: [
+            {
+              description: 'Job Type: Engineering',
+            },
+            {
+              description: 'Location: United States (Remote)',
+            },
+            {
+              description: 'Full Time',
+            },
+            {
+              description: 'Benefits',
+            },
+          ],
+          callToAction: {
+            target: '_blank',
+            text: 'Learn More',
+            href: '/junior',
+          },
+          hasRibbon: true,
+        },
+        {
+          title: 'Senior Safety Engineer',
+          subtitle: '',
+          price: 10,
+          period: 'period',
+          items: [
+            {
+              description: 'Job Type: Engineering',
+            },
+            {
+              description: 'Location: United States (Remote)',
+            },
+            {
+              description: 'Full Time',
+            },
+            {
+              description: 'Benefits',
+            },
+          ],
+          callToAction: {
+            target: '_blank',
+            text: 'Learn More',
+            href: '/senior',
+          },
+          hasRibbon: true,
+        },
+        {
+          title: 'Principal Safety Engineer',
+          subtitle: '',
+          price: 10,
+          period: 'period',
+          items: [
+            {
+              description: 'Job Type: Engineering',
+            },
+            {
+              description: 'Location: United States (Remote)',
+            },
+            {
+              description: 'Full Time',
+            },
+            {
+              description: 'Benefits',
+            },
+            
+          ],
+          callToAction: {
+            target: '_blank',
+            text: 'Learn More',
+            href: '/principal',
+          },
+          hasRibbon: true,
+        },
+        
+      ]}
+    />
+    </Layout>

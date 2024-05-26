@@ -1,0 +1,135 @@
+---
+import Image from '~/components/common/Image.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { getPermalink } from '~/utils/permalinks';
+
+const metadata = {
+  title: 'Experience',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    title="Experience"
+    subtitle="CSA’s extensive experience with vital systems development across industries offers access to the best practices. Read about some of our projects below to see how CSA can help you create a safer world."
+    actions={[{ variant: 'primary', target: '_blank', text: 'Contact Us', href: getPermalink('/contact') }]}
+    image={{
+      src: '~/assets/images/EXP_HEAD.jpg',
+      alt: 'AstroWind Hero Image',
+    }}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    columns={3}
+    items={[
+      {
+        title: 'Autonomous Mobile Robot',
+        description:
+          'CSA was asked to perform an audit and gap analysis of the existing functional safety team and the documentation. A detailed report, including actionable tasks, was delivered to close the gaps and lead the program to a successful certification to ISO 13849 and accompanying robotics standards.',
+        icon: '',
+        image: {
+          src: 'https://criticalsa-website.s3.amazonaws.com/_astro/EXP_AMR.khVmCtzA.jpeg',
+          alt: 'Steps image',
+        }
+      },
+      
+      {
+        title: 'Autonomous Agriculture Equipment',
+        description:
+          'CSA consultants were held on retainer to provide general functional safety advice on an as needed basis. Topics include certification approach, applicable standards, and technical discussions safety analysis.',
+        icon: '',
+        image: {
+          src: 'https://criticalsa-website.s3.amazonaws.com/_astro/EXP_Agriculture.QnlNma6z.jpeg',
+          alt: 'Steps image',
+        }
+      },
+      
+      {
+        title: 'Autonomous Rail Transport Vehicle',
+        description: 'CSA is responsible for defining and implementing the functional safety program to align with applicable safety standards. This includes developing concept of operation documents, defining safety program process and deliverables to encompass all subsystems and performing system level hazard analyses',
+        icon: '',
+        image: {
+          src: 'https://criticalsa-website.s3.amazonaws.com/_astro/Tram+with+sunset.W9PR3NkS.jpg',
+          alt: 'Steps image',
+        }
+      },
+      
+      {
+        title: 'Battery Management System for On-Road Applications',
+        description:
+          'CSA was engaged to develop safety culture within the client’s organization, and to lead the organization through the certification of the specific battery management software. An organizational structure for an efficient functional safety team was recommended and developed by our CSA team.',
+        icon: '',
+        image: {
+          src: 'https://criticalsa-website.s3.amazonaws.com/_astro/BMS.BTHL6_Ao.jpg',
+          alt: 'Steps image',
+        }
+      },
+      
+      {
+        title: 'Autonomous Heavy Haul Truck',
+        description:
+          'CSA has worked with a truck manufacturer to develop a plan to certify the trucks’ safety equipment to ISO 13849, ISO 19014, and ISO 17757. The team developed a safety management plan to guide the certification, created a Hazard Analysis Risk Assessment (HARA), and wrote the safety design documentation.',
+        icon: '',
+        image: {
+          src: 'https://criticalsa-website.s3.amazonaws.com/_astro/EXP_Truck.DEQKrZkQ.jpeg',
+          alt: 'Steps image',
+        }
+      },
+      
+      {
+        title: 'Autonomous Parcel Delivery Vehicle',
+        description:
+          'CSA’s team contributed to the program’s functional safety certification efforts (ISO 26262) as individual contributors, participating in work product creation and safety analyses.',
+        icon: '',
+        image: {
+          src: 'https://criticalsa-website.s3.amazonaws.com/_astro/Parcel+deliver+AMR+1.Bkt5BV1X.jpg',
+          alt: 'Steps image',
+        }
+      },
+      
+      {
+        title: 'Bipedal Robot',
+        description:
+          'CSA was asked to perform an audit and gap analysis of the existing functional safety team and the documentation. A detailed report, including actionable tasks, was delivered to close the gaps and lead the program to a successful certification to ISO 13849 and accompanying robotics standards.',
+        icon: '',
+        image: {
+          src: 'https://criticalsa-website.s3.amazonaws.com/_astro/humanoid+1.DAXsrwUa.jpg',
+          alt: 'Steps image',
+        }
+      },
+      
+      {
+        title: 'Autonomous Guided Vehicle (AGV)',
+        description:
+          'CSA managed the assembly of a functional safety team and the accompanying processes required to design and build an AGV. The safety team was guided to achieve compliance with ISO 3691-4.',
+        icon: '',
+        image: {
+          src: 'https://criticalsa-website.s3.amazonaws.com/_astro/Auto_Car.Du47ALGO.jpeg',
+          alt: 'Steps image',
+        }
+      },
+      
+      
+      {
+        title: 'Industrial Machinery',
+        description:
+          'CSA managed the assembly of a functional safety team and the accompanying processes required to design and build an AGV. The safety team was guided to achieve compliance with ISO 3691-4.',
+        icon: '',
+        image: {
+          src: 'https://criticalsa-website.s3.amazonaws.com/_astro/welding+robotic+arm+3.BuUbIoCN.jpg',
+          alt: 'Steps image',
+        }
+      },
+      
+    ]}
+  />
+</Layout>
